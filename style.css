@@ -1,81 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tote Bag Collection</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #E6E6FA; /* Light Purple */
-      margin: 0;
-      padding: 0;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #E6E6FA; /* Light Purple */
+  margin: 0;
+  padding: 0;
+}
 
-    header {
-      background: #9370DB; /* Medium purple for contrast */
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+header {
+  background: #9370DB; /* Medium purple */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
 
-    h1 {
-      margin: 0;
-    }
+h1 {
+  margin: 0;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2 per row on big screens */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center; /* center cards */
+}
 
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.2s;
-    }
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+  width: 100%;
+  max-width: 320px; /* prevents overly large cards */
+}
 
-    .card:hover {
-      transform: scale(1.05);
-    }
+.card:hover {
+  transform: scale(1.05);
+}
 
-    .card img {
-      width: 100%;
-      height: auto;
-    }
+.card img {
+  width: 100%;
+  height: 300px; /* fixed height for uniform size */
+  object-fit: cover; /* crops without stretching */
+}
 
-    .card h3 {
-      margin: 10px 0;
-      color: #4B0082; /* Dark purple */
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Tote Bag Collection</h1>
-  </header>
+.card h3 {
+  margin: 10px 0;
+  color: #4B0082; /* Dark purple */
+}
 
-  <div class="gallery">
-    <div class="card">
-      <img src="Tote_images/tote1.jpg" alt="Tote Bag 1">
-      <h3>Tote Bag 1</h3>
-    </div>
-    <div class="card">
-      <img src="Tote_images/tote2.jpg" alt="Tote Bag 2">
-      <h3>Tote Bag 2</h3>
-    </div>
-    <div class="card">
-      <img src="Tote_images/tote3.jpg" alt="Tote Bag 3">
-      <h3>Tote Bag 3</h3>
-    </div>
-    <div class="card">
-      <img src="Tote_images/tote4.jpg" alt="Tote Bag 4">
-      <h3>Tote Bag 4</h3>
-    </div>
-  </div>
-</body>
-</html>
+.products {
+  text-align: center;
+  margin: 50px 20px;
+}
+
+
